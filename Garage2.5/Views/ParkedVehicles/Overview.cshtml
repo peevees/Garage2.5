@@ -1,0 +1,120 @@
+﻿@model IEnumerable<Garage2._5.Models.ParkedVehicles>
+
+@{
+    ViewBag.Title = "Overview";
+}
+<div class="container tablebackground">
+    <h2>OverView</h2>
+
+
+
+
+    @using (Html.BeginForm("searchOverview", "ParkedVehicles", FormMethod.Post))
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-horizontal">
+            <dl class="dl-horizontal">
+                <dt>
+                    Search by:
+                </dt>
+                <dd>
+                    <form>
+                        <div>
+                            @*<label class="radio"><input type="radio" name="filter" value="Reg">Reg</label>
+                                <label class="radio"><input type="radio" name="filter" value="Brand">Brand</label>
+                                <label class="radio"><input type="radio" name="filter" value="Type">Type</label>*@
+                            @Html.RadioButton("filter", "Registration Number") <span>RegistrationNumber</span>
+                            @Html.RadioButton("filter", "Type") <span>Type</span>
+
+                        </div>
+                    </form>
+                </dd>
+                <dd>
+                    <input type="text" name="search"> <input type="submit" value="search" class="btn btn-info" />
+                </dd>
+                <p>@ViewBag.output</p>
+            </dl>
+        </div>
+
+    }
+
+    @section Scripts {
+        @Scripts.Render("~/bundles/jqueryval")
+    }
+
+
+
+
+
+
+
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.RegistrationNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Type)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Brand)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CheckIn)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Color)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Member)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Member.PhoneNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Member.Address)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Member.Email)
+            </th>
+
+
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.RegistrationNumber)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Type.TypeName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Brand)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CheckIn)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Color)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Member.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Member.PhoneNumber)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Member.Address)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Member.Email)
+                </td>
+            </tr>
+        }
+
+    </table>
+</div>
