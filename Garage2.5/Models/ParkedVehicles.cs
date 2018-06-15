@@ -10,9 +10,8 @@ namespace Garage2._5.Models
     public class ParkedVehicles
     {
         public int Id { get; set; }
-		//[Required]
+		[Required]
 		[StringLength(30)]
-		[RegValidation, Required]
 		[Display(Name = "Registration Number")]
         public string RegistrationNumber { get; set; }
 
