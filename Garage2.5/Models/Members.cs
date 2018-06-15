@@ -9,11 +9,20 @@ namespace Garage2._5.Models
     public class Members
     {
         public int Id { get; set; }
+		[Required]
+		[StringLength(30)]
         public string Name { get; set; }
-        [Display(Name = "Phone Number")]
+		[Required]
+		[StringLength(30)]
+		[Display(Name = "Phone Number")]
         public string PhoneNumber { get; set; }
+		[StringLength(30)]
+		[Required]
         public string Address { get; set; }
-        [Display(Name = "E-Mail")]
+		
+		[Required]
+		[EmailAddress]
+		[Display(Name = "E-Mail")]
         public string Email { get; set; }
 
         //Navigational properties

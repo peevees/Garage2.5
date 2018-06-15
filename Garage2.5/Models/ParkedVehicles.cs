@@ -10,17 +10,23 @@ namespace Garage2._5.Models
     public class ParkedVehicles
     {
         public int Id { get; set; }
-        [RegValidation]
-        [Display(Name = "Registration Number")]
+		[Required]
+		[StringLength(30)]
+		[Display(Name = "Registration Number")]
         public string RegistrationNumber { get; set; }
-        
-        
-        public string Color { get; set; }
-        public string Brand { get; set; }
-        [Display(Name = "Check In")]
+
+		[Required]
+		[StringLength(30)]
+		public string Color { get; set; }
+		[Required]
+		[StringLength(30)]
+		public string Brand { get; set; }
+		
+		[Display(Name = "Check In")]
         public DateTime CheckIn { get; set; }
 
         public int TypeId { get; set; }
+	
         public int MemberId { get; set; }
      
         //Navigational properties

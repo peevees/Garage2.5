@@ -161,13 +161,13 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201806121407179_initial.cs" />
-    <Compile Include="Migrations\201806121407179_initial.Designer.cs">
-      <DependentUpon>201806121407179_initial.cs</DependentUpon>
+    <Compile Include="Migrations\201806150916161_validatiom-for-memeberand.cs" />
+    <Compile Include="Migrations\201806150916161_validatiom-for-memeberand.Designer.cs">
+      <DependentUpon>201806150916161_validatiom-for-memeberand.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201806130703166_datetime.cs" />
-    <Compile Include="Migrations\201806130703166_datetime.Designer.cs">
-      <DependentUpon>201806130703166_datetime.cs</DependentUpon>
+    <Compile Include="Migrations\201806150917159_validatiom-for-memeberandAnd-Vehicle.cs" />
+    <Compile Include="Migrations\201806150917159_validatiom-for-memeberandAnd-Vehicle.Designer.cs">
+      <DependentUpon>201806150917159_validatiom-for-memeberandAnd-Vehicle.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Creatanewmodel.cs" />
@@ -225,7 +225,6 @@
     <Content Include="Views\ParkedVehicles\Edit.cshtml" />
     <Content Include="Views\ParkedVehicles\Index.cshtml" />
     <Content Include="Views\ParkedVehicles\Overview.cshtml" />
-    <Content Include="Views\ParkedVehicles\Receipt.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -244,11 +243,11 @@
     <Content Include="Scripts\jquery-3.3.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201806121407179_initial.resx">
-      <DependentUpon>201806121407179_initial.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201806150916161_validatiom-for-memeberand.resx">
+      <DependentUpon>201806150916161_validatiom-for-memeberand.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201806130703166_datetime.resx">
-      <DependentUpon>201806130703166_datetime.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201806150917159_validatiom-for-memeberandAnd-Vehicle.resx">
+      <DependentUpon>201806150917159_validatiom-for-memeberandAnd-Vehicle.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
