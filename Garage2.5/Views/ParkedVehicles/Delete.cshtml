@@ -1,0 +1,69 @@
+﻿@model Garage2._5.Models.ParkedVehicles
+
+@{
+    ViewBag.Title = "Delete";
+}
+<div class="container tablebackground">
+    <h2>Check Out</h2>
+
+    <h3>Are you sure you want to Check Out this?</h3>
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+        <div class="form-horizontal tablebackground">
+            <hr />
+            <dl class="dl-horizontal">
+                <dt>
+                    @Html.DisplayNameFor(model => model.RegistrationNumber)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.RegistrationNumber)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Color)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Color)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Brand)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Brand)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Type)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Type.TypeName)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Member)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Member.Name)
+                </dd>
+
+            </dl>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10 @*form-actions no-color*@">
+                <input type="submit" value="Check Out" class="btn btn-danger" />
+            </div>
+        </div>
+        @Html.ActionLink("Back to parked vehicles", "Index")
+    }
+    <br />
+</div>
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

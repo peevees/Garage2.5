@@ -1,0 +1,72 @@
+﻿@model Garage2._5.Models.ParkedVehicles
+
+@{
+    ViewBag.Title = "Details";
+}
+<div class="container tablebackground">
+    <h2>Details</h2>
+
+    <div>
+        <h4>Vehicle</h4>
+        <hr />
+        <dl class="dl-horizontal tablebackground">
+            <dt>
+                @Html.DisplayNameFor(model => model.RegistrationNumber)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.RegistrationNumber)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Color)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Color)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Brand)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Brand)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Type)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Type.TypeName)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.MemberId)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.MemberId)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Member.Name)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Member.Name)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.CheckIn)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.CheckIn)
+            </dd>
+
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+        @Html.ActionLink("Back to Vehicles", "Index")
+    </p>
+</div>

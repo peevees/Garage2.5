@@ -1,0 +1,28 @@
+﻿@model IEnumerable<Garage2._5.Models.VehicleType>
+
+@{
+    ViewBag.Title = "Index";
+}
+<div class="container tablebackground">
+    <h2>Vehicle Types</h2>
+
+
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.TypeName)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TypeName)
+                </td>
+            </tr>
+        }
+
+    </table>
+</div>

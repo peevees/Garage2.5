@@ -1,0 +1,61 @@
+﻿@model Garage2._5.Models.Members
+
+@{
+    ViewBag.Title = "Delete";
+}
+<div class="container tablebackground">
+    <h2>Remove</h2>
+
+    <h3>Are you sure you want to Remove this?</h3>
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+        <div class="form-horizontal">
+            <hr />
+            <dl class="dl-horizontal">
+                <dt>
+                    @Html.DisplayNameFor(model => model.Name)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Name)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.PhoneNumber)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.PhoneNumber)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Address)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Address)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Email)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Email)
+                </dd>
+
+            </dl>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10 @*form-actions no-color*@">
+                <input type="submit" value="Delete" class="btn btn-danger" />
+            </div>
+        </div>
+        @Html.ActionLink("Back to Members", "Index")
+    }
+    <br />
+</div>
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
