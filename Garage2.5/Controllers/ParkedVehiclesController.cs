@@ -14,7 +14,7 @@ namespace Garage2._5.Controllers
     {
         private Garage2_5Context db = new Garage2_5Context();
 
-  
+
         private List<ParkedVehicles> empty = new List<ParkedVehicles>();
 
         // GET: Members
@@ -33,8 +33,8 @@ namespace Garage2._5.Controllers
                         ViewBag.output = ($".... {b} couldn't be found....");
                         return View(empty);
                     }
-                
-                
+
+
                 case "Type":
                     if (parkedVehicles.Where(i => i.Type.TypeName.ToString().Contains(b)).ToList().Count() > 0)
                     {
@@ -45,7 +45,7 @@ namespace Garage2._5.Controllers
                         ViewBag.output = ($".... {b} couldn't be found....");
                         return View(empty);
                     }
-               
+
                 default:
                     if (a == null && b == null)
                     { return View(parkedVehicles.ToList()); }
@@ -125,7 +125,7 @@ namespace Garage2._5.Controllers
 
         public ActionResult Receipt(ParkedVehicles vehicles)
         {
-            
+
             DateTime checkOut = GenerateTime();
             TimeSpan parkedTime = checkOut.Subtract(vehicles.CheckIn);
             var TotalTime = parkedTime.ToString(@"d\.h\:mm");
@@ -148,7 +148,7 @@ namespace Garage2._5.Controllers
         {
             return RedirectToAction("Index");
         }
-      
+
 
 
 
@@ -177,7 +177,7 @@ namespace Garage2._5.Controllers
         }
 
         // POST: ParkedVehicles/Create
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
+        // To protect from overposting attacks, please enable the specific properties you want to bind to, for
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
@@ -213,7 +213,7 @@ namespace Garage2._5.Controllers
         }
 
         // POST: ParkedVehicles/Edit/5
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
+        // To protect from overposting attacks, please enable the specific properties you want to bind to, for
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
