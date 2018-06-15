@@ -10,7 +10,7 @@ namespace Garage2._5.Models
 	public class CreateViewmodel
 	{
 		[StringLength(30)]
-		[RegValidation, Required]
+		/*[RegValidation, Required]*/
 		[Display(Name = "Registration Number")]
 		public string RegistrationNumber { get; set; }
 

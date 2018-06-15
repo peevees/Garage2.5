@@ -190,9 +190,10 @@ namespace Garage2._5.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
+			var model = new CreateViewmodel() { Types = db.VehicleTypes, Members = db.Members };
 			//ViewBag.TypeId = new SelectList(db.VehicleTypes, "Id", "TypeName");
 			//ViewBag.MemberId = new SelectList(db.Members, "Id", "Name");
-			return View(parkedVehicles);
+			return View(model);
         }
 
         // GET: ParkedVehicles/Edit/5
@@ -207,8 +208,8 @@ namespace Garage2._5.Controllers
             {
                 return HttpNotFound();
             }
-            ViewBag.TypeId = new SelectList(db.VehicleTypes, "Id", "TypeName",parkedVehicles.TypeId);
-            ViewBag.MemberId = new SelectList(db.Members, "Id", "Name", parkedVehicles.MemberId);
+            //ViewBag.TypeId = new SelectList(db.VehicleTypes, "Id", "TypeName",parkedVehicles.TypeId);
+            //ViewBag.MemberId = new SelectList(db.Members, "Id", "Name", parkedVehicles.MemberId);
             return View(parkedVehicles);
         }
 

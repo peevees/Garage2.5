@@ -175,7 +175,6 @@
       <DependentUpon>201806151153593_validation32.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
-    <Compile Include="Models\Creatanewmodel.cs" />
     <Compile Include="Models\Garage2_5Context.cs" />
     <Compile Include="Models\Members.cs" />
     <Compile Include="Models\ParkedVehicles.cs" />
