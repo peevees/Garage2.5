@@ -14,7 +14,7 @@ namespace Garage2._5.CustomValidation
 
         protected override ValidationResult IsValid(object value, ValidationContext validationContext)
 		{
-
+            //TODO: fix validation
            
             List<ParkedVehicles> model;
 			ParkedVehicles vehicle = (ParkedVehicles)validationContext.ObjectInstance;
