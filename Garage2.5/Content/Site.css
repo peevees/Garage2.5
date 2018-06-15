@@ -33,8 +33,7 @@ textarea {
     visibility: hidden;
 }
 .tablebackground {
-    background-color: black;
-    opacity: 0.75;
+    background-color: rgba(0,0,0,0.75);
     border-radius: 25px;
     padding-bottom: 15px;
 }

@@ -170,11 +170,10 @@ namespace Garage2._5.Controllers
         // GET: ParkedVehicles/Create
         public ActionResult Create()
         {
-            //var model = new Creatanewmodel() { Types = db.VehicleTypes, Members = db.Members, ParkedVehicles = db.ParkedVehicles};
-            
-            ViewBag.TypeId = new SelectList(db.VehicleTypes, "Id", "TypeName");
-            ViewBag.MemberId = new SelectList(db.Members, "Id", "Name");
-            return View();
+			var model = new CreateViewmodel() { Types = db.VehicleTypes, Members = db.Members };
+            //ViewBag.TypeId = new SelectList(db.VehicleTypes, "Id", "TypeName");
+            //ViewBag.MemberId = new SelectList(db.Members, "Id", "Name");
+            return View(model);
         }
 
         // POST: ParkedVehicles/Create
@@ -191,8 +190,9 @@ namespace Garage2._5.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-
-            return View(parkedVehicles);
+			//ViewBag.TypeId = new SelectList(db.VehicleTypes, "Id", "TypeName");
+			//ViewBag.MemberId = new SelectList(db.Members, "Id", "Name");
+			return View(parkedVehicles);
         }
 
         // GET: ParkedVehicles/Edit/5
@@ -225,7 +225,9 @@ namespace Garage2._5.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View(parkedVehicles);
+			ViewBag.TypeId = new SelectList(db.VehicleTypes, "Id", "TypeName", parkedVehicles.TypeId);
+			ViewBag.MemberId = new SelectList(db.Members, "Id", "Name", parkedVehicles.MemberId);
+			return View(parkedVehicles);
         }
 
         // GET: ParkedVehicles/Delete/5

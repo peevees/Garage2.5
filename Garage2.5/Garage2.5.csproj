@@ -154,6 +154,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Models\CreateViewmodel.cs" />
     <Compile Include="Controllers\MembersController.cs" />
     <Compile Include="Controllers\ParkedVehiclesController.cs" />
     <Compile Include="Controllers\VehicleTypesController.cs" />
@@ -161,13 +162,17 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201806150916161_validatiom-for-memeberand.cs" />
-    <Compile Include="Migrations\201806150916161_validatiom-for-memeberand.Designer.cs">
-      <DependentUpon>201806150916161_validatiom-for-memeberand.cs</DependentUpon>
+    <Compile Include="Migrations\201806151132180_validatio.cs" />
+    <Compile Include="Migrations\201806151132180_validatio.Designer.cs">
+      <DependentUpon>201806151132180_validatio.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201806150917159_validatiom-for-memeberandAnd-Vehicle.cs" />
-    <Compile Include="Migrations\201806150917159_validatiom-for-memeberandAnd-Vehicle.Designer.cs">
-      <DependentUpon>201806150917159_validatiom-for-memeberandAnd-Vehicle.cs</DependentUpon>
+    <Compile Include="Migrations\201806151137219_validation3.cs" />
+    <Compile Include="Migrations\201806151137219_validation3.Designer.cs">
+      <DependentUpon>201806151137219_validation3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806151153593_validation32.cs" />
+    <Compile Include="Migrations\201806151153593_validation32.Designer.cs">
+      <DependentUpon>201806151153593_validation32.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Creatanewmodel.cs" />
@@ -225,6 +230,7 @@
     <Content Include="Views\ParkedVehicles\Edit.cshtml" />
     <Content Include="Views\ParkedVehicles\Index.cshtml" />
     <Content Include="Views\ParkedVehicles\Overview.cshtml" />
+    <Content Include="Views\ParkedVehicles\Receipt.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -243,11 +249,14 @@
     <Content Include="Scripts\jquery-3.3.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201806150916161_validatiom-for-memeberand.resx">
-      <DependentUpon>201806150916161_validatiom-for-memeberand.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201806151132180_validatio.resx">
+      <DependentUpon>201806151132180_validatio.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201806150917159_validatiom-for-memeberandAnd-Vehicle.resx">
-      <DependentUpon>201806150917159_validatiom-for-memeberandAnd-Vehicle.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201806151137219_validation3.resx">
+      <DependentUpon>201806151137219_validation3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806151153593_validation32.resx">
+      <DependentUpon>201806151153593_validation32.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

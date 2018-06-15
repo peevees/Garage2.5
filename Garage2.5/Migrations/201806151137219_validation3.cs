@@ -3,7 +3,7 @@ namespace Garage2._5.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class validatiomformemeberandAndVehicle : DbMigration
+    public partial class validation3 : DbMigration
     {
         public override void Up()
         {

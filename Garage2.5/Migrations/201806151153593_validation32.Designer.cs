@@ -7,13 +7,13 @@ namespace Garage2._5.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class validatiomformemeberandAndVehicle : IMigrationMetadata
+    public sealed partial class validation32 : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(validatiomformemeberandAndVehicle));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(validation32));
         
         string IMigrationMetadata.Id
         {
-            get { return "201806150917159_validatiom-for-memeberandAnd-Vehicle"; }
+            get { return "201806151153593_validation32"; }
         }
         
         string IMigrationMetadata.Source
